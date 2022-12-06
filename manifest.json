@@ -1,0 +1,16 @@
+{
+  "name": "Wordle solver",
+  "description": "Will try to solve nytimes worldle",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "solver.html",
+    "default_icon": "wordsicon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["./words.js", "./solveme.js"],
+      "matches": ["https://www.nytimes.com/games/wordle/*"]
+    }
+  ]
+}
